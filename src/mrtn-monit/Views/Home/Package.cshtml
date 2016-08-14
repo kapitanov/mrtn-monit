@@ -1,0 +1,25 @@
+﻿@model Mrtn.Models.PackageModel
+
+<div class="page-header">
+  <h1>
+    <a href="~/@(Model.Id)" class="btn btn-default">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Go back
+    </a>
+    @("K" + Model.Id)
+    <small>
+      @(Model.Package.Time.ToString("d MMM yyyy"))
+    </small>
+  </h1>
+</div>
+
+<ul class="list-group">
+  @foreach (var aggr in Model.Package.AggregatedInfos)
+{
+  <li class="list-group-item">
+    <span class="badge">@aggr.Count</span>
+    <a href="~/@(Model.Id)/history/specific?t=@(aggr.Type)&sq=@((int) (aggr.Square*100))&b=@(aggr.HasBalcony ? 1 : 0)">
+      @aggr.Type @(aggr.HasBalcony ? "+balcony" : "") @aggr.Square m<sup>2</sup>
+    </a>
+  </li>
+}
+</ul>

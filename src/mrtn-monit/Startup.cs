@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
+using Chroniton;
+using Chroniton.Schedules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Mrtn.Data;
+using Serilog;
 
-namespace mrtn_monit
+namespace Mrtn
 {
     public class Startup
     {
@@ -23,38 +26,58 @@ namespace mrtn_monit
         }
 
         public IConfigurationRoot Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
             services.AddMvc();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IApplicationLifetime appLifetime)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+            InitializeLogger(loggerFactory, env, appLifetime);
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-
+            app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
+            app.UseMvc(routes => { });
 
-            app.UseMvc(routes =>
+            Storage.Initialize(Path.Combine(env.ContentRootPath, "db"));
+
+            var singularity = Singularity.Instance;
+            var job = new AsyncJob(MrtnMonitor.RunAsync);
+            var schedule = new EveryXTimeSchedule(TimeSpan.FromHours(1));
+            singularity.ScheduleJob(schedule, job, true);
+            singularity.Start();
+        }
+
+        private static void InitializeLogger(ILoggerFactory loggerFactory, IHostingEnvironment env, IApplicationLifetime appLifetime)
+        {
+            var filename = Path.Combine(env.ContentRootPath, "logs", "log.txt");
+
+            Log.Logger = new LoggerConfiguration()
+                .Enrich.WithThreadId()
+                .Enrich.FromLogContext()
+                .WriteTo.LiterateConsole()
+                .WriteTo.RollingFile(filename, retainedFileCountLimit: 1)
+                .CreateLogger();
+
+            loggerFactory.AddSerilog();
+            appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
+        }
+
+        private sealed class AsyncJob : IJob
+        {
+            private readonly Func<Task> _action;
+
+            public AsyncJob(Func<Task> action)
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+                _action = action;
+            }
+
+            public string Name { get; set; } = "async_job";
+
+            public ScheduleMissedBehavior ScheduleMissedBehavior => ScheduleMissedBehavior.RunAgain;
+
+            public Task Start(DateTime scheduledTime) => _action();
         }
     }
 }

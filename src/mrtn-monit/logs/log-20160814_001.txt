@@ -1,0 +1,123 @@
+2016-08-14 23:41:49.658 +03:00 [Information] Starting FETCH at 08/14/2016 00:00:00
+2016-08-14 23:41:49.828 +03:00 [Information] Will not fetch data for "1"
+2016-08-14 23:41:49.831 +03:00 [Information] Will not fetch data for "2"
+2016-08-14 23:41:49.831 +03:00 [Information] Will not fetch data for "3"
+2016-08-14 23:41:59.128 +03:00 [Information] Starting FETCH at 08/14/2016 00:00:00
+2016-08-14 23:41:59.209 +03:00 [Information] Will not fetch data for "1"
+2016-08-14 23:41:59.211 +03:00 [Information] Will not fetch data for "2"
+2016-08-14 23:41:59.211 +03:00 [Information] Will not fetch data for "3"
+2016-08-14 23:41:59.488 +03:00 [Warning] Unable to fetch data for "4" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:41:59.455 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2016-08-14 23:41:59.687 +03:00 [Warning] Unable to fetch data for "5" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:41:59.882 +03:00 [Warning] Unable to fetch data for "6" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:41:59.903 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Index (mrtn-monit)" with arguments (null) - ModelState is Valid
+2016-08-14 23:42:00.074 +03:00 [Warning] Unable to fetch data for "7" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:42:00.075 +03:00 [Information] Will not fetch data for "8"
+2016-08-14 23:42:00.075 +03:00 [Information] Will not fetch data for "9"
+2016-08-14 23:42:00.076 +03:00 [Information] FETCH completed
+2016-08-14 23:42:00.318 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Flat2&sq=4783&b=1  
+2016-08-14 23:42:00.424 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Studio", "4783", "False"]) - ModelState is Invalid
+2016-08-14 23:42:42.882 +03:00 [Information] Starting FETCH at 08/14/2016 00:00:00
+2016-08-14 23:42:42.958 +03:00 [Information] Will not fetch data for "1"
+2016-08-14 23:42:42.959 +03:00 [Information] Will not fetch data for "2"
+2016-08-14 23:42:42.960 +03:00 [Information] Will not fetch data for "3"
+2016-08-14 23:42:43.338 +03:00 [Warning] Unable to fetch data for "4" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:42:43.467 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2016-08-14 23:42:43.556 +03:00 [Warning] Unable to fetch data for "5" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:42:43.783 +03:00 [Warning] Unable to fetch data for "6" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:42:43.979 +03:00 [Warning] Unable to fetch data for "7" due to HTTP error: "Response status code does not indicate success: 404 (Not Found)."
+2016-08-14 23:42:43.980 +03:00 [Information] Will not fetch data for "8"
+2016-08-14 23:42:43.980 +03:00 [Information] Will not fetch data for "9"
+2016-08-14 23:42:43.981 +03:00 [Information] FETCH completed
+2016-08-14 23:42:44.000 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Index (mrtn-monit)" with arguments (null) - ModelState is Valid
+2016-08-14 23:42:45.915 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2016-08-14 23:42:45.994 +03:00 [Information] User profile is available. Using '"C:\Users\Albert\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2016-08-14 23:42:46.164 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Index (mrtn-monit)" in 2265.7248ms
+2016-08-14 23:42:46.172 +03:00 [Information] Request finished in 2731.3107ms 200 text/html; charset=utf-8
+2016-08-14 23:42:56.138 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Flat2&sq=4783&b=1  
+2016-08-14 23:42:56.254 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Flat2", "4783", "False"]) - ModelState is Invalid
+2016-08-14 23:43:08.063 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/SpecificHistory.cshtml".
+2016-08-14 23:43:08.077 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" in 11931.6822ms
+2016-08-14 23:43:08.078 +03:00 [Information] Request finished in 11940.5833ms 200 text/html; charset=utf-8
+2016-08-14 23:43:08.518 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2016-08-14 23:43:08.533 +03:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"d:\projects\mrtn-monit\src\mrtn-monit\wwwroot\favicon.ico"'
+2016-08-14 23:43:08.544 +03:00 [Information] Request finished in 26.639ms 200 image/x-icon
+2016-08-14 23:43:28.813 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Flat2&sq=4783&b=1  
+2016-08-14 23:43:28.817 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Flat2", "4783", "False"]) - ModelState is Invalid
+2016-08-14 23:43:28.855 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/SpecificHistory.cshtml".
+2016-08-14 23:43:28.862 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" in 46.7713ms
+2016-08-14 23:43:28.862 +03:00 [Information] Request finished in 49.6039ms 200 text/html; charset=utf-8
+2016-08-14 23:43:29.064 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2016-08-14 23:43:29.066 +03:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"d:\projects\mrtn-monit\src\mrtn-monit\wwwroot\favicon.ico"'
+2016-08-14 23:43:29.067 +03:00 [Information] Request finished in 2.7473ms 200 image/x-icon
+2016-08-14 23:43:42.231 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1  
+2016-08-14 23:43:42.233 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Building (mrtn-monit)" with arguments (["1"]) - ModelState is Valid
+2016-08-14 23:43:42.269 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Building.cshtml".
+2016-08-14 23:43:42.278 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Building (mrtn-monit)" in 46.2686ms
+2016-08-14 23:43:42.280 +03:00 [Information] Request finished in 49.2884ms 200 text/html; charset=utf-8
+2016-08-14 23:43:43.390 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:43:43.391 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:43:43.437 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:43:43.446 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 54.9405ms
+2016-08-14 23:43:43.447 +03:00 [Information] Request finished in 57.4536ms 200 text/html; charset=utf-8
+2016-08-14 23:43:54.867 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:43:54.869 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:43:54.901 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:43:54.910 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 41.1624ms
+2016-08-14 23:43:54.911 +03:00 [Information] Request finished in 44.833ms 200 text/html; charset=utf-8
+2016-08-14 23:43:55.123 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2016-08-14 23:43:55.124 +03:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"d:\projects\mrtn-monit\src\mrtn-monit\wwwroot\favicon.ico"'
+2016-08-14 23:43:55.126 +03:00 [Information] Request finished in 3.024ms 200 image/x-icon
+2016-08-14 23:44:03.412 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:44:03.413 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:44:03.448 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:44:03.457 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 44.1702ms
+2016-08-14 23:44:03.458 +03:00 [Information] Request finished in 46.0718ms 200 text/html; charset=utf-8
+2016-08-14 23:44:03.857 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2016-08-14 23:44:03.858 +03:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"d:\projects\mrtn-monit\src\mrtn-monit\wwwroot\favicon.ico"'
+2016-08-14 23:44:03.860 +03:00 [Information] Request finished in 3.0464ms 200 image/x-icon
+2016-08-14 23:44:08.815 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Flat1&sq=3375&b=0  
+2016-08-14 23:44:08.816 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Flat1", "3375", "False"]) - ModelState is Invalid
+2016-08-14 23:44:08.820 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/SpecificHistory.cshtml".
+2016-08-14 23:44:08.821 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" in 5.1559ms
+2016-08-14 23:44:08.822 +03:00 [Information] Request finished in 6.3927ms 200 text/html; charset=utf-8
+2016-08-14 23:44:16.629 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1  
+2016-08-14 23:44:16.631 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Building (mrtn-monit)" with arguments (["1"]) - ModelState is Valid
+2016-08-14 23:44:16.633 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Building.cshtml".
+2016-08-14 23:44:16.634 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Building (mrtn-monit)" in 3.2029ms
+2016-08-14 23:44:16.635 +03:00 [Information] Request finished in 5.5657ms 200 text/html; charset=utf-8
+2016-08-14 23:44:18.140 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:44:18.141 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:44:18.144 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:44:18.145 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 3.8649ms
+2016-08-14 23:44:18.146 +03:00 [Information] Request finished in 6.1525ms 200 text/html; charset=utf-8
+2016-08-14 23:44:19.485 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Studio&sq=1976&b=0  
+2016-08-14 23:44:19.487 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Studio", "1976", "False"]) - ModelState is Invalid
+2016-08-14 23:44:19.491 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/SpecificHistory.cshtml".
+2016-08-14 23:44:19.492 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" in 5.192ms
+2016-08-14 23:44:19.493 +03:00 [Information] Request finished in 7.953ms 200 text/html; charset=utf-8
+2016-08-14 23:44:21.350 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1  
+2016-08-14 23:44:21.351 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Building (mrtn-monit)" with arguments (["1"]) - ModelState is Valid
+2016-08-14 23:44:21.353 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Building.cshtml".
+2016-08-14 23:44:21.354 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Building (mrtn-monit)" in 2.8059ms
+2016-08-14 23:44:21.354 +03:00 [Information] Request finished in 4.8237ms 200 text/html; charset=utf-8
+2016-08-14 23:44:22.218 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:44:22.219 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:44:22.222 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:44:22.223 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 3.6337ms
+2016-08-14 23:44:22.224 +03:00 [Information] Request finished in 6.1298ms 200 text/html; charset=utf-8
+2016-08-14 23:44:25.340 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/history/specific?t=Flat1&sq=3389&b=0  
+2016-08-14 23:44:25.342 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" with arguments (["1", "Flat1", "3389", "False"]) - ModelState is Invalid
+2016-08-14 23:44:25.346 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/SpecificHistory.cshtml".
+2016-08-14 23:44:25.347 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.SpecificHistory (mrtn-monit)" in 5.138ms
+2016-08-14 23:44:25.348 +03:00 [Information] Request finished in 7.5722ms 200 text/html; charset=utf-8
+2016-08-14 23:44:27.139 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1  
+2016-08-14 23:44:27.140 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Building (mrtn-monit)" with arguments (["1"]) - ModelState is Valid
+2016-08-14 23:44:27.142 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Building.cshtml".
+2016-08-14 23:44:27.143 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Building (mrtn-monit)" in 2.5463ms
+2016-08-14 23:44:27.144 +03:00 [Information] Request finished in 4.7592ms 200 text/html; charset=utf-8
+2016-08-14 23:44:30.079 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/1/package/20160814  
+2016-08-14 23:44:30.081 +03:00 [Information] Executing action method "Mrtn.Controllers.HomeController.Package (mrtn-monit)" with arguments (["1", "20160814"]) - ModelState is Valid
+2016-08-14 23:44:30.084 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Package.cshtml".
+2016-08-14 23:44:30.085 +03:00 [Information] Executed action "Mrtn.Controllers.HomeController.Package (mrtn-monit)" in 4.0483ms
+2016-08-14 23:44:30.085 +03:00 [Information] Request finished in 5.9571ms 200 text/html; charset=utf-8

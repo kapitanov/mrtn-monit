@@ -1,0 +1,23 @@
+﻿@model Mrtn.Models.BuildingModel
+
+<div class="page-header">
+  <h1>
+    <a href="~/" class="btn btn-default">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Go back
+    </a>
+    @("K" + Model.Id)
+    <a href="~/@(Model.Id)/history" class="btn btn-default">
+      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> View history
+    </a>
+  </h1>
+</div>
+
+<div class="list-group">
+  @foreach (var time in Model.Times)
+  {
+    <a href="~/@(Model.Id)/package/@(time.ToString("yyyyMMdd"))" class="list-group-item">
+      <span class="badge"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></span>
+      @(time.ToString("d MMM yyyy"))
+    </a>
+  }
+</div>
